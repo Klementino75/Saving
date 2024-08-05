@@ -55,8 +55,8 @@ public class Main {
         }
     }
 
-    private static void saveGame(String path, GameProgress gameProgress) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(path))) {
+    private static void saveGame(String fileName, GameProgress gameProgress) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
             oos.writeObject(gameProgress); // запишем экземпляр класса в файл
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
