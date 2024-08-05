@@ -44,6 +44,7 @@ public class Main {
                     ZipEntry entry = new ZipEntry(String.valueOf(fileName));
                     zout.putNextEntry(entry);
                     byte[] buffer = new byte[fis.available()]; // считываем содержимое файла в массив byte
+                    fis.read(buffer);
                     zout.write(buffer); // добавляем содержимое к архиву
                     zout.closeEntry(); // закрываем текущую запись для новой записи
                 } catch (Exception e) {
