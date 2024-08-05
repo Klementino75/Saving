@@ -53,7 +53,6 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     private static void saveGame(String path, GameProgress gameProgress) {
